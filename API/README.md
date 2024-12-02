@@ -1,6 +1,6 @@
-# stock-market-data-FASTAPI## 
+# stock-market-data-FASTAPI
 
-專案簡介
+## 專案簡介
 獲取MySQL的證交所、櫃買中心與期交所收盤資料。
 
 ## 目錄結構
