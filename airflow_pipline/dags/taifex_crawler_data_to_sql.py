@@ -6,6 +6,7 @@ import json
 from datetime import timedelta
 from io import StringIO
 
+# 檢查網頁是否更新的邏輯
 def check_file_in_response(response):
     try:
         # 將回應內容解碼為指定編碼（big5），並嘗試轉換為 StringIO
@@ -40,6 +41,7 @@ def taifex_crawler_data_to_sql():
     retry_delay=timedelta(minutes=1),
     response_check=check_file_in_response,
     )
+    # 取得日期
     date = pendulum.now("Asia/Taipei").format("YYYYMMDD")
 
     raw_data = taifex_crawler_to_sql.extract_data(date)
